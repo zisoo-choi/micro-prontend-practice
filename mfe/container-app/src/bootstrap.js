@@ -10,6 +10,7 @@ import App from './App.jsx';
 
 /*
     HTML에서 id가 root인 요소를 찾아 rootElement 변수에 할당한다.
+    (할당 = 참조한다. -> 포인터 생각하기)
     (이 요소는 React 애플리케이션이 렌더링될 대상 요소이다.)
 */
 const rootElement = document.getElementById('root');
@@ -17,5 +18,7 @@ const rootElement = document.getElementById('root');
     createRoot 메서드를 사용하여 rootElement를 루트로 설정하고,
     render 메서드를 호출하여 <APP/> 컴포넌트를 해당 루트에 렌더링한다.
     이를 통해 React 애플리케이션이 시작되고 화면이 표시된다.
+
+    createRoot : react 애플리케이션을 초기화하고, 루트 요소를 설정하는 역할을 한다.
 */
 createRoot(rootElement).render(<App/>);
