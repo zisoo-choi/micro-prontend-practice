@@ -4,16 +4,16 @@
   "workspaces": {
     "packages": [
       "container-app",
-      "vue-module-app",
-      "vue-navigation-app"
+      "vue-module-app"
     ]
   },
   "scripts": {
-    "start" : "lerna run --parallel start",
-    "build" : "lerna run build"
+    "start": "lerna run --parallel start",
+    "build": "lerna run build"
   },
   "devDependencies": {
     "external-remotes-plugin": "1.0.0",
-    "lerna": "^7.0.2"
+    "lerna": "^7.0.2",
+    "webpack-cli": "^5.1.4"
   }
 }

@@ -18,15 +18,17 @@
     값이 변경되면 vue는 자동으로 컴포넌트를 리렌더링하여 변경 사항을 반영한다.
 */
 import { ref } from 'vue';
+import BoardListPage from './board/page/BoardListPage.vue';
 const count = ref(0)
 </script>
 
 <template>
     <div id="moduleApp">
-        <p>Vue - Module App</p>
+        <p>나는 Vue Module App</p>
         <button @click="count++">
-            빨리 버튼 눌러봐 {{ count }} 번 눌렀어
+            빨리 버튼 눌러봐 {{ count }} 번 눌럿어
         </button>
+        <router-view/>
     </div>
 </template>
 
