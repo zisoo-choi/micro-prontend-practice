@@ -16,7 +16,9 @@
     "@babel/core": "^7.15.8",
     "@babel/plugin-transform-runtime": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
+    "@babel/preset-typescript": "^7.22.5",
     "@mdi/font": "^7.2.96",
+    "@types/webfontloader": "^1.6.35",
     "@vue/compiler-sfc": "^3.2.19",
     "autoprefixer": "^10.1.0",
     "babel-loader": "^8.2.2",
@@ -27,14 +29,17 @@
     "postcss-loader": "^4.1.0",
     "roboto-fontface": "^0.10.0",
     "sass": "^1.63.6",
+    "sass-loader": "^13.3.2",
     "style-loader": "^3.3.0",
     "tailwindcss": "^2.0.2",
-    "typescript": "^5.1.3",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6",
     "vue-cli-plugin-vuetify": "^2.5.8",
     "vue-loader": "^16.8.1",
     "vue-style-loader": "^4.1.3",
     "vue-svg-inline-loader": "^2.1.5",
     "vue-template-compiler": "^2.6.14",
+    "vuetify": "^3.3.6",
     "webfontloader": "^1.6.28",
     "webpack": "^5.57.1",
     "webpack-cli": "^4.9.0",
@@ -42,7 +47,6 @@
     "webpack-plugin-vuetify": "^2.0.1"
   },
   "dependencies": {
-    "vue": "^3.2.19",
-    "vuetify": "^3.3.5"
+    "vue": "^3.2.19"
   }
 }
