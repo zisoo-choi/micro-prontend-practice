@@ -13,6 +13,8 @@ const mount = (el) => {
     // mount 함수와 동일한 것이 아니다.
     // 해당 mount는 app 객체의 mount 메서드를 호출하는 것이다.
     // 이 mount 메서드는 애플리케이션을 지정한 DOM 요소에 마운트 하는 역할이다.
+
+    // 위의 코드를 통해 store와 router가 앱에 등록되었다.
     app.mount(el)
 };
 

@@ -16,7 +16,9 @@
 <script>
 import BoardReadForm from '../components/BoardReadForm.vue'
 import { mapActions, mapState } from 'vuex';
+
 const boardModule = 'boardModule'
+
 export default {
     components: {
         BoardReadForm
@@ -24,14 +26,15 @@ export default {
     props: {
         boardId: {
             type: String,
+            // ↓ boardId에 대한 props를 부모 컴포넌트로 부터 "필수"로 전달받아야 한다는 뜻
             required: true,
         },
     },
     computed: {
-        ...mapState(boardModule, ['board'])
+        ...mapState(boardModule, ['board']) // 무조건 적인 것은 아니나, 일반적으로 computed에서 동작한다.
     },
     methods: {
-        ...mapActions(
+        ...mapActions( // 헬퍼 함수이기 때문에 methods에서 동작한다.
             boardModule, ['requestBoardToSpring', 'requestDeleteBoardToSpring']
         ),
         async onDelete () {
