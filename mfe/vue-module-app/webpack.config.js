@@ -54,6 +54,7 @@ module.exports = (_, argv) => ({
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
+    new VueLoaderPlugin(),
     new ModuleFederationPlugin({
       name: "vueModuleApp",
       filename: "remoteEntry.js",
@@ -67,7 +68,6 @@ module.exports = (_, argv) => ({
       template: path.resolve(__dirname, './public/index.html'),
       chunks: ['main'],
     }),
-    new VueLoaderPlugin(),
   ],
   devServer: {
     static: {

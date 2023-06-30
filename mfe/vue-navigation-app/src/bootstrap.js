@@ -1,17 +1,28 @@
-// 그냥 붙여오기만 한 페이지, 여기부터 수정해야 함
 import { createApp } from "vue";
-import "./index.css";
 
-import Sample from './domain/Sample.vue';
-import store from './store'
-import router from './router'
+import "../public/index.scss";
 
-const mount = (el) => {
-    const app = createApp(Sample).use(store).use(router)
+import App from "./App.vue";
+
+import { loadFonts } from "./plugin/webfontloader"
+
+import * as components from "vuetify/components";
+import * as directives from  "vuetify/directives";
+import { createVuetify } from "vuetify";
+
+const navigationMount = (el) => {
+    loadFonts()
+
+    const vuetify = createVuetify({
+        components, directives
+    })
+
+    const app = createApp(App).use(vuetify)
     app.mount(el)
 };
 
-const root = document.querySelector("#vue-navigation")
+const root = document.querySelector('#vue-navigation')
 
-if (root) { mount(root) }
-export { mount }
+if(root) { navigationMount(root) }
+
+export { navigationMount }

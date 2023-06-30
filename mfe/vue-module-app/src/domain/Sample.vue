@@ -25,7 +25,7 @@ const count = ref(0)
 <template>
     <div id="moduleApp">
         <p>나는 Vue Module App</p>
-        <button @click="count++">
+        <button title="clickTest" @click="count++">
             빨리 버튼 눌러봐 {{ count }} 번 눌럿어
         </button>
         <router-view/>
@@ -34,6 +34,6 @@ const count = ref(0)
 
 <style scoped>
 #moduleApp{
-    background-color: yellow;
+    background-color:rgb(255, 227, 223);
 }
 </style>
